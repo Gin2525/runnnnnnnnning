@@ -1,10 +1,5 @@
 import os
 from flask import *
-import requests
-import datetime
-import pprint
-import psycopg2
-from bs4 import BeautifulStoneSoup
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -12,9 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-import time
 from Message_generater import Message_generater
-from linebot.models import FlexSendMessage
 
 
 CHANNEL_ACCESS_TOKEN = os.environ['LINE_CHANNEL_ACCESS_TOKEN']

@@ -1,0 +1,12 @@
+curl -X POST \
+-H 'Content-Type:application/json' \
+-H 'Authorization: Bearer bBTBVNQm6wXAePmpfiIXqzWX5nK5qpzgH/VdMKm8U/da06YY6Ki41AlMtYR6o1gI3ICavfh8nMFLLSEUjmc29oGtJnasii6qo++OySQbGFzoRenChrdaCemCV/DArTPjRJEEoPDUAEBt26GdkT/aDAdB04t89/1O/w1cDnyilFU=' \
+-d '{
+    "to": "Ccff6d282891e398e17cf65a39fc2c7c9",
+    "messages":[
+        {
+            "type":"text",
+            "text":"てめぇら、調子こいてるとぶっ殺すぞ"
+        }
+    ]
+}' https://api.line.me/v2/bot/message/push

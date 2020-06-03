@@ -11,7 +11,7 @@ from Message_generater import Message_generater
 
 
 CHANNEL_ACCESS_TOKEN = os.environ['LINE_CHANNEL_ACCESS_TOKEN']
-CHANNEL_SECRET=os.environ['LINE_CHANNEL_SECRET']
+CHANNEL_SECRET = os.environ['LINE_CHANNEL_SECRET']
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
 app = Flask(__name__)
@@ -53,11 +53,14 @@ def handle_postback(event):
     user_id = event.source.user_id
     user_name = line_bot_api.get_profile(user_id).display_name
     answer = event.postback.data
-    message = f'{user_name}さんは'
+    message = ''
     if answer == 'yes':
-        message +='走るみたいです！'
-    else:
-        message +='走らないみたいです...'
+        message += f'{user_name}さんは走るみたいです！'
+    elif answer == 'no':
+        message += f'{user_name}さんは走らないみたいです...'
+    elif answer == 'time_picker':
+        date = event.postback.params['time']
+        message += f'{user_name}さんは{date}からを希望しています！'
     line_bot_api.reply_message(event.reply_token,TextSendMessage(message))
 
 

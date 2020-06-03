@@ -59,7 +59,8 @@ class Message_generater:
           },
           {
             "type": "separator",
-            "margin": "lg"
+            "margin": "md",
+            "color": "#FFFFFF"
           },
           {
             "type": "button",
@@ -69,8 +70,7 @@ class Message_generater:
               "type": "postback",
               "label": "いいえ",
               "data": "no"
-            },
-            "margin": "none"
+            }
           }
         ]
       },

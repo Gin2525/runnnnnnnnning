@@ -6,7 +6,7 @@ curl -X POST \
     "messages":[
         {
             "type":"text",
-            "text":"てめぇら、調子こいてるとぶっ殺すぞ"
+            "text":"あー。あー。マイクテスト。マイクテスト。本日は晴天なり。"
         }
     ]
 }' https://api.line.me/v2/bot/message/push
